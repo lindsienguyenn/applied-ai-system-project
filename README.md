@@ -97,7 +97,7 @@ PawPal+ is organized into five modules that work together in a clean pipeline. U
 
 ### Prerequisites
 - Python **3.11 or higher**
-- An [Anthropic API key](https://console.anthropic.com/) (free tier works)
+- A **free** [Google Gemini API key](https://aistudio.google.com/app/apikey) (no credit card needed)
 - Git (optional, for cloning)
 
 ### Step-by-Step
@@ -119,18 +119,18 @@ venv\Scripts\activate
 # Windows PowerShell:
 .\venv\Scripts\Activate.ps1
 
-# 3. Install dependencies (only 2 packages!)
+# 3. Install dependencies (only 1 package!)
 pip install -r requirements.txt
 
-# 4. Set your Anthropic API key as an environment variable
+# 4. Set your Gemini API key as an environment variable
 # macOS / Linux:
-export ANTHROPIC_API_KEY="sk-ant-your-key-here"
+export GEMINI_API_KEY="your-key-here"
 
 # Windows CMD:
-set ANTHROPIC_API_KEY=sk-ant-your-key-here
+set GEMINI_API_KEY=your-key-here
 
 # Windows PowerShell:
-$env:ANTHROPIC_API_KEY="sk-ant-your-key-here"
+$env:GEMINI_API_KEY="your-key-here"
 
 # 5. Run the app
 streamlit run app.py
@@ -138,12 +138,18 @@ streamlit run app.py
 
 The app opens automatically at **http://localhost:8501**
 
+### Getting your free Gemini API key
+1. Go to [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click **Create API Key** → copy it
+4. No credit card required!
+
 ### Verify it's working
 - The sidebar should show the "Add a Pet" form
 - Add a pet (e.g., "Buddy", Dog) — the dashboard should appear
 - In the AI Advisor tab, ask *"How often should I walk Buddy?"* — you should get a response within a few seconds
 
-> ⚠️ **Troubleshooting:** If you see an API error, double-check that your `ANTHROPIC_API_KEY` environment variable is set in the same terminal window where you ran `streamlit run app.py`.
+> ⚠️ **Troubleshooting:** If you see an API error, double-check that your `GEMINI_API_KEY` environment variable is set in the same terminal window where you ran `streamlit run app.py`.
 
 ---
 
@@ -311,11 +317,25 @@ pawpalplus/
 
 **Dependencies:** `streamlit>=1.35.0`, `anthropic>=0.25.0` — nothing else.
 
+---
+
+## 🎤 Presentation Guide (5–7 Minutes)
+
+1. **(1 min)** Show the original PawPal repo — explain what it did and what was missing
+2. **(1 min)** Walk through the architecture diagram — explain RAG and the agentic loop in plain English
+3. **(3 min)** Live demo:
+   - Add two pets
+   - Add conflicting tasks → show the conflict warning
+   - Ask a nutrition question → show the "How I answered this" panel
+   - Ask a medical question → show the automatic vet disclaimer being added
+4. **(1 min)** Testing summary — show the test table, explain what failed and why
+5. **(30 sec)** Responsible AI reflection — one honest limitation
 
 ---
 
 ## 👩‍💻 Portfolio Reflection
 
+**GitHub:** [github.com/YOUR_USERNAME/pawpalplus-final](https://github.com/YOUR_USERNAME/pawpalplus-final)
 
 **What this project says about me as an AI engineer:**
 
