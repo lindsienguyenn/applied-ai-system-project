@@ -1,6 +1,7 @@
 # 🐾 PawPal+ — AI-Powered Pet Care Planning Assistant
 
 > **AI 110 Final Project** | Built on [Module 2: PawPal](https://github.com/lindsienguyenn/ai110-module2show-pawpal-starter)
+> Demo: https://www.loom.com/share/a53cda99dd53486d9e5446f2285a7bb7
 
 ---
 
